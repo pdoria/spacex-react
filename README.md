@@ -3,6 +3,11 @@ computer.
 Parts of the UI are still missing as this was developed<br>
 as a training exercise in React+GraphQL
 
+###Before trying to run the project you should:
+npm install
+cd ui
+npm install
+
 ## Available scripts
 In the project directory, you can run:
 
