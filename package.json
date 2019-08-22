@@ -1,0 +1,28 @@
+{
+  "name": "spacex-graphql-api",
+  "version": "1.0.0",
+  "description": "SpaceX launches",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "ui": "npm start --prefix ui",
+    "dev": "concurrently \"npm run server\" \"npm run ui\""
+  },
+  "keywords": [
+    "spacex",
+    "api",
+    "graphql"
+  ],
+  "author": "Pedro Doria Meunier <pdoriam@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.8.1",
+    "axios": "^0.19.0",
+    "graphql": "^14.4.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.1"
+  }
+}

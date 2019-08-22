@@ -1,0 +1,50 @@
+// smartphones (portrait view)
+$screen-sm-min: 320px;
+$screen-sm-max: 667px;
+// Small tablets (landscape view)
+$screen-md-min: 800px;
+// Tablets and small desktops
+$screen-lg-min: 1024px;
+// Large tablets and desktops
+$screen-xl-min: 1280px;
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (min-width: $screen+'px') {
+    @content;
+  }
+}
+// Small devices
+@mixin mobile {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+// Medium devices
+@mixin tablet {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+// Large devices
+@mixin desktop {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+    font-size: 1.1rem;
+  }
+}
+
+
+//Centers both horizontally and vertically
+@mixin centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

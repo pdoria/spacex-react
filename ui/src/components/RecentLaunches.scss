@@ -1,0 +1,74 @@
+@import '../styles/mixins.scss';
+@import '../styles/theme.scss';
+
+
+.recent-launches-title {
+    text-align: center;
+    @include tablet{
+        text-align: left;
+    }
+}
+.recent-missions {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    margin: 1.5rem 0;
+    padding-inline-start: unset;
+    justify-content: space-around;
+    margin: 2rem 0px;
+    justify-content: flex-start;
+    
+    flex-wrap:wrap;
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .mission {
+
+        flex: 0 1 25%;
+        margin: 0 1rem;
+        @include tablet {
+            margin: unset;
+        }
+
+        .patch-image {
+            width: 64px;
+            height: 64px;
+            overflow: hidden;
+            transition: all 300ms;
+    
+            @include desktop {
+                width: 128px;
+                height: 128px;
+            }
+
+            &:hover {
+                transform:scale(1.1);
+            }
+        }
+
+        .info, .launch-date {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.7rem;
+
+            @include desktop {
+                font-size: 0.8rem;
+            }
+        }
+
+        .text-success {
+            color: greenyellow;
+        }
+
+        .text-danger {
+            color: red;
+        }
+        margin-bottom: 1rem;
+
+    }
+
+
+    
+}

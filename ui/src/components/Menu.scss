@@ -1,0 +1,80 @@
+@import '../styles/mixins.scss';
+@import '../styles/theme.scss';
+
+.menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 70px;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 9;
+    background-color: $semi-transparent;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    padding-left: 30px;
+    
+}
+
+.menu-options {
+    display:flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+        float: left;
+        transition: all 300ms;
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: $link-color;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 0.7rem;
+            padding: 0 0.2rem;
+
+            &:hover{
+                color: $white;
+            }
+
+            @include tablet {
+                font-weight: 600;
+                font-size: 1rem;
+                padding: 0 0.5rem;
+            }
+            @include desktop {
+                font-weight: 600;
+                padding: 0 1rem;
+            }
+
+            
+        }
+    }
+    
+}
+
+.logo {
+    width: 64px;
+    max-width: 250px;
+    display: inline-block;
+
+    @include tablet {
+        width: 128px
+    }
+    @include desktop {
+        width: 200px;
+    }
+    @include xl {
+        width: 320px;
+    }
+}

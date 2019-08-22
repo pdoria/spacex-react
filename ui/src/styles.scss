@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './styles/mixins.scss';
+@import './styles/theme.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $body-bg;
+    color: $body-color;
+    width: 100%;
+    height: 100%;
+  }
+
+  body, html {
+      height: 100%;
+      width: 100%;
+  }
+  
+  div#root {
+      height: 100%;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  section {
+    padding: 0 2rem;
+  }
+
+  .btn {
+        display: block;
+        max-width: 300px;
+        text-transform: uppercase;
+        text-align: center;
+        color: rgb(246, 199, 68);
+        line-height: 1.35;
+        padding: 0.75rem 1rem;
+        margin: 1rem auto 0px;
+        transition: all 300ms ease 0s;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(246, 199, 68);
+        border-image: initial;
+        background: transparent;
+        font-size: 0.7rem;
+
+        &:hover {
+            cursor: pointer;
+            border-color: $white;
+            color: $white;
+
+        }
+
+        @include desktop {
+          font-size: 1rem;
+        }
+        @include xl {
+          font-size: 1.2rem;
+        }
+    }
+
+// "puff" placeholder for images while loading
+
+
+@keyframes fadeInImg {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+
+.puff {
+  @include centered;
+  width: 33.333%;
+  height: 33.333%;
+}
+
+.img-loading {
+  position: relative;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+}
+.img-loaded {
+   animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1) 1;
+   position: relative;
+   opacity: 0;
+   animation-fill-mode: forwards;
+   animation-duration: 0.7s;
+   animation-delay: 0.1s;
+}
