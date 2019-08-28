@@ -26,7 +26,7 @@ export class App extends Component {
           {/* This is the / so the following matches and renders the component! */}
           <Route exact path="/" component={Home} />
           {/* <Route exact path="/launches" component={Launches} /> */}
-          <Route exact path="/launch/:id" component={Launch} />
+          <Route path="/launch/:id" component={Launch} />
         </Router>
       </ApolloProvider>
     )
